@@ -7,17 +7,29 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace TrainingProject2
+namespace TrainingProject2.Admin
 {
-    public partial class _Default : Page
+    public partial class ModifyMainpageFirstField : System.Web.UI.Page
     {
         SqlConnection con = new SqlConnection("Data Source=KORKMAZ;Initial Catalog=Kindergarten;Integrated Security=True");
+        
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
 
-                VeriListele();
+            VeriListele();
+        }
+
+        protected void btn_update_Click(object sender, EventArgs e)
+        {
+            SqlCommand cmd2 = new SqlCommand("UPDATE Tbl_Anasayfayorum SET Anasayfayorum =@p1 where YorumId=@p2", con);
+            con.Open();
+            cmd2.Parameters.AddWithValue("@p1", txtMainpageMessage.Text);
+            cmd2.Parameters.AddWithValue("@p2", 1);
+            cmd2.ExecuteNonQuery();
+            con.Close();
+            Response.Write("Kayıt güncellenmiştir.");
         }
 
         protected void VeriListele()
@@ -29,7 +41,7 @@ namespace TrainingProject2
 
             while (oku.Read())
             {
-                lblAnasayfaMesaj.Text = oku["Anasayfayorum"].ToString();
+                txtMainpageMessage.Text = oku["Anasayfayorum"].ToString();
             }
             oku.Close();
             con.Close();
