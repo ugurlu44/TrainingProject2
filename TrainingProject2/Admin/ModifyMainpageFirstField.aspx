@@ -12,7 +12,7 @@
             <asp:Label ID="Label1" runat="server" Text="Anasayfa Mesajı"></asp:Label>
             <br />
             <br />
-            <asp:TextBox ID="txtMainpageMessage" runat="server" Height="59px" Width="212px"></asp:TextBox>
+            <asp:TextBox ID="txtMainpageMessage" TextMode="MultiLine" runat="server" Height="200px" Width="250px"></asp:TextBox>
             <br />
         </div>
         <asp:Button ID="btn_update" runat="server" OnClick="btn_update_Click" Text="Güncelle" />
