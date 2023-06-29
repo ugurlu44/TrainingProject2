@@ -13,7 +13,6 @@
         <br />
         <asp:TextBox ID="txtFirstLinieMessage" runat="server" Height="137px" TextMode="MultiLine" Width="317px"></asp:TextBox>
         <br />
-        <asp:Button ID="btn_updateFirstLinie" runat="server" OnClick="btn_updateFirstLinie_Click" Text="Güncelle" />
         <br />
         <br />
         <br />
@@ -24,7 +23,7 @@
             <asp:TextBox ID="txtSecondLinieMessage" TextMode="MultiLine" runat="server" Height="137px" Width="314px"></asp:TextBox>
             <br />
         </div>
-        <asp:Button ID="btn_updateSecondLinie" runat="server" OnClick="btn_updateSecondLinie_Click" Text="Güncelle" />
+        <asp:Button ID="btnUpdate" runat="server" OnClick="btnUpdate_Click" Text="Güncelle" />
         <br />
     </form>
 </body>

@@ -177,9 +177,10 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Business\MainPageInfoBusiness2.cs" />
     <Compile Include="Business\MainPageInfoBusiness.cs" />
-    <Compile Include="Common\Connection.cs" />
+    <Compile Include="Business\Connection.cs" />
+    <Compile Include="Common\CommonConst.cs" />
+    <Compile Include="Common\MainPageEditableEnum.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

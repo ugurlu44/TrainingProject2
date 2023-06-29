@@ -42,15 +42,6 @@ namespace TrainingProject2.Admin
         protected global::System.Web.UI.WebControls.TextBox txtFirstLinieMessage;
 
         /// <summary>
-        /// btn_updateFirstLinie control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_updateFirstLinie;
-
-        /// <summary>
         /// Label1 control.
         /// </summary>
         /// <remarks>
@@ -69,12 +60,12 @@ namespace TrainingProject2.Admin
         protected global::System.Web.UI.WebControls.TextBox txtSecondLinieMessage;
 
         /// <summary>
-        /// btn_updateSecondLinie control.
+        /// btnUpdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_updateSecondLinie;
+        protected global::System.Web.UI.WebControls.Button btnUpdate;
     }
 }

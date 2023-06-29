@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Data;
-using System.Data.SqlClient;
-using TrainingProject2.Common;
 using TrainingProject2.Business;
+using TrainingProject2.Common;
 
 namespace TrainingProject2.Admin
 {
@@ -23,20 +17,16 @@ namespace TrainingProject2.Admin
 
         private void getTextInfo()
         {
-            txtFirstLinieMessage.Text = MainPageInfoBusiness2.GetMainPageInfoText();
-            txtSecondLinieMessage.Text = MainPageInfoBusiness.GetMainPageInfoText();
+            txtFirstLinieMessage.Text = MainPageInfoBusiness.GetMainPageInfoText(MainPageEditableEnum.FirstLineHeader);
+            txtSecondLinieMessage.Text = MainPageInfoBusiness.GetMainPageInfoText(MainPageEditableEnum.SecondLineContent);
         }
 
-        protected void btn_updateSecondLinie_Click(object sender, EventArgs e)
-        {
-            MainPageInfoBusiness.InsertOrUpdateInfoText(txtSecondLinieMessage.Text);
-            Response.Write("Kayıt güncellenmiştir.");
-        }
 
-        protected void btn_updateFirstLinie_Click(object sender, EventArgs e)
+        protected void btnUpdate_Click(object sender, EventArgs e)
         {
-            MainPageInfoBusiness2.InsertOrUpdateInfoText(txtFirstLinieMessage.Text);
-            Response.Write("Kayıt güncellenmiştir.");
+            MainPageInfoBusiness.InsertOrUpdateInfoText(txtFirstLinieMessage.Text, MainPageEditableEnum.FirstLineHeader);
+            MainPageInfoBusiness.InsertOrUpdateInfoText(txtSecondLinieMessage.Text, MainPageEditableEnum.SecondLineContent);
+            Response.Write(CommonConst.RecordSaveSuccusfully);
         }
     }
 }
