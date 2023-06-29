@@ -23,14 +23,20 @@ namespace TrainingProject2.Admin
 
         private void getTextInfo()
         {
-            txtMainpageMessage.Text = MainPageInfoBusiness.GetMainPageInfoText();
+            txtFirstLinieMessage.Text = MainPageInfoBusiness2.GetMainPageInfoText();
+            txtSecondLinieMessage.Text = MainPageInfoBusiness.GetMainPageInfoText();
         }
 
-        protected void btn_update_Click(object sender, EventArgs e)
+        protected void btn_updateSecondLinie_Click(object sender, EventArgs e)
         {
-            MainPageInfoBusiness.InsertOrUpdateInfoText(txtMainpageMessage.Text);
+            MainPageInfoBusiness.InsertOrUpdateInfoText(txtSecondLinieMessage.Text);
             Response.Write("Kayıt güncellenmiştir.");
         }
 
+        protected void btn_updateFirstLinie_Click(object sender, EventArgs e)
+        {
+            MainPageInfoBusiness2.InsertOrUpdateInfoText(txtFirstLinieMessage.Text);
+            Response.Write("Kayıt güncellenmiştir.");
+        }
     }
 }

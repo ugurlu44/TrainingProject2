@@ -3,9 +3,11 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        <h1>ASP.NET</h1>
+        <h1>
+            <asp:Label ID="lblDefaultFirstLineMessage" runat="server" Text="Label"></asp:Label>
+        </h1>
         <p>
-            <asp:Label ID="lblAnasayfaMesaj" runat="server" Text="Label"></asp:Label>
+            <asp:Label ID="lblDefaultSecondLineMessage" runat="server" Text="Label"></asp:Label>
         </p>
         <p class="lead">&nbsp;</p>
         <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>

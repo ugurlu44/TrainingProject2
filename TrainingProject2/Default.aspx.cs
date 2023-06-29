@@ -15,7 +15,8 @@ namespace TrainingProject2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            lblAnasayfaMesaj.Text = MainPageInfoBusiness.GetMainPageInfoText();
+            lblDefaultFirstLineMessage.Text = MainPageInfoBusiness2.GetMainPageInfoText();
+            lblDefaultSecondLineMessage.Text = MainPageInfoBusiness.GetMainPageInfoText();
         }
     }
 }

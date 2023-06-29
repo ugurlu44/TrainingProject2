@@ -177,6 +177,7 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Business\MainPageInfoBusiness2.cs" />
     <Compile Include="Business\MainPageInfoBusiness.cs" />
     <Compile Include="Common\Connection.cs" />
     <Compile Include="Contact.aspx.cs">
