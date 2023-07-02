@@ -6,7 +6,7 @@ namespace TrainingProject2.Business
     {
         public static SqlConnection GetConnection()
         {
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-4ISBFD4;Initial Catalog=dbTraining;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=Korkmaz;Initial Catalog=dbTraining;Integrated Security=True");
             return con;
         }
     }

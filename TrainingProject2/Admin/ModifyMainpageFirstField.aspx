@@ -22,6 +22,25 @@
             <br />
             <asp:TextBox ID="txtSecondLinieMessage" TextMode="MultiLine" runat="server" Height="137px" Width="314px"></asp:TextBox>
             <br />
+            <br />
+            <asp:Label ID="Label3" runat="server" Text="Anasayfa Başlarken Mesajı"></asp:Label>
+            <br />
+            <br />
+            <asp:TextBox ID="txtGettingStartedMessage" TextMode="MultiLine" runat="server" Height="137px" Width="314px"></asp:TextBox>
+            <br />
+            <br />
+            <asp:Label ID="Label4" runat="server" Text="Anasayfa Daha Fazla Bilgi Mesajı"></asp:Label>
+            <br />
+            <br />
+            <asp:TextBox ID="txtGetLibraries" TextMode="MultiLine" runat="server" Height="137px" Width="314px" ></asp:TextBox>
+            <br />
+            <br />
+            <asp:Label ID="Label5" runat="server" Text="Anasayfa WebHosting Mesajı"></asp:Label>
+            <br />
+            <br />
+            <asp:TextBox ID="txtWebHosting" TextMode="MultiLine" runat="server" Height="137px" Width="314px"></asp:TextBox>
+            <br />
+            <br />
         </div>
         <asp:Button ID="btnUpdate" runat="server" OnClick="btnUpdate_Click" Text="Güncelle" />
         <br />

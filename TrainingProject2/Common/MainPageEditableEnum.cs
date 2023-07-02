@@ -9,5 +9,8 @@ namespace TrainingProject2.Common
     {
         FirstLineHeader = 15,
         SecondLineContent = 25,
+        GettingStartedLine = 3,
+        GetLibraries = 4,
+        WebHosting = 5,
     }
 }
