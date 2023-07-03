@@ -14,6 +14,7 @@ namespace TrainingProject2
             lblGettingStartedMessage.Text = MainPageInfoBusiness.GetMainPageInfoText(MainPageEditableEnum.GettingStartedLine);
             lblGetLibraries.Text = MainPageInfoBusiness.GetMainPageInfoText(MainPageEditableEnum.GetLibraries);
             lblWebHosting.Text = MainPageInfoBusiness.GetMainPageInfoText(MainPageEditableEnum.WebHosting);
+            lblStarter.Text = MainPageInfoBusiness.GetMainPageInfoText(MainPageEditableEnum.Starter);
         }
     }
 }

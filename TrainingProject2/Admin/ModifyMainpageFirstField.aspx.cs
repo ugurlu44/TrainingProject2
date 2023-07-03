@@ -22,6 +22,7 @@ namespace TrainingProject2.Admin
             txtGettingStartedMessage.Text = MainPageInfoBusiness.GetMainPageInfoText(MainPageEditableEnum.GettingStartedLine);
             txtGetLibraries.Text = MainPageInfoBusiness.GetMainPageInfoText(MainPageEditableEnum.GetLibraries);
             txtWebHosting.Text = MainPageInfoBusiness.GetMainPageInfoText(MainPageEditableEnum.WebHosting);
+            txtStarter.Text = MainPageInfoBusiness.GetMainPageInfoText(MainPageEditableEnum.Starter);
         }
 
 
@@ -32,6 +33,8 @@ namespace TrainingProject2.Admin
             MainPageInfoBusiness.InsertOrUpdateInfoText(txtGettingStartedMessage.Text, MainPageEditableEnum.GettingStartedLine);
             MainPageInfoBusiness.InsertOrUpdateInfoText(txtGetLibraries.Text, MainPageEditableEnum.GetLibraries);
             MainPageInfoBusiness.InsertOrUpdateInfoText(txtWebHosting.Text, MainPageEditableEnum.WebHosting);
+            MainPageInfoBusiness.InsertOrUpdateInfoText(txtStarter.Text, MainPageEditableEnum.Starter);
+
             Response.Write(CommonConst.RecordSaveSuccusfully);
         }
     }

@@ -9,11 +9,12 @@ namespace TrainingProject2.Business
         public static string GetMainPageInfoText(MainPageEditableEnum commentTyepId)
         {
             string textInfo = "";
-            SqlConnection con = Connection.GetConnection();
+            SqlConnection con = MyConnection.GetConnection();
             con.Open();
             SqlCommand cmd = new SqlCommand("Select * from [dbTraining].[dbo].[tbMainPageInfo] WHERE(commentType = " + (int)commentTyepId + ")", con);
             cmd.ExecuteNonQuery();
             SqlDataReader oku = cmd.ExecuteReader();
+
 
             while (oku.Read())
             {
@@ -38,33 +39,25 @@ namespace TrainingProject2.Business
 
         private static void insertTextInfo(string textInfo, MainPageEditableEnum commentType)
         {
-            SqlConnection con = Connection.GetConnection();
-            SqlCommand cmd2 = new SqlCommand("INSERT INTO dbTraining.dbo.tbMainPageInfo " +
-                "values(" + (int)commentType + ",'" + textInfo + "',1,0,'" + DateTime.Now.ToString("yyyyMMdd HH:mm:ss") + "',null,null)", con);
-            con.Open();
-            cmd2.ExecuteNonQuery();
-            con.Close();
+            string query = "INSERT INTO dbTraining.dbo.tbMainPageInfo " +
+                "values(" + (int)commentType + ",'" + textInfo + "',1,0,'" + DateTime.Now.ToString("yyyyMMdd HH:mm:ss") + "',null,null)";
+
+            MyConnection.ExecuteCommand(query);
         }
 
         private static void updateTextInfo(string textInfo, MainPageEditableEnum commentType)
         {
-            SqlConnection con = Connection.GetConnection();
-            SqlCommand cmd2 = new SqlCommand("UPDATE dbTraining.dbo.tbMainPageInfo SET comment ='" + textInfo + "',updatedOn = '"+DateTime.Now.ToString("yyyyMMdd HH:mm:ss")+"' where commentType=" + (int)commentType, con);
-            con.Open();
-            cmd2.ExecuteNonQuery();
-            con.Close();
+            string query = "UPDATE dbTraining.dbo.tbMainPageInfo SET comment ='" + textInfo + "',updatedOn = '" + DateTime.Now.ToString("yyyyMMdd HH:mm:ss") + "' where commentType=" + (int)commentType;
+
+            MyConnection.ExecuteCommand(query);
+
         }
 
         private static bool isTextInfoExists(MainPageEditableEnum commentType)
         {
-            string sql = "SELECT COUNT(1) from  [dbTraining].[dbo].[tbMainPageInfo] WHERE(commentType = " + (int)commentType + ")";
-            SqlConnection con = Connection.GetConnection();
-            con.Open();
-            SqlCommand cmd = new SqlCommand(sql, con);
-            int count = (int)cmd.ExecuteScalar();
-            con.Close();
+            string query = "SELECT COUNT(1) from  [dbTraining].[dbo].[tbMainPageInfo] WHERE(commentType = " + (int)commentType + ")";
+            int count =  (int)MyConnection.ExecuteScalar(query);
             return count > 0;
-
         }
     }
 }
