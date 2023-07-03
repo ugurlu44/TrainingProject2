@@ -15,7 +15,7 @@
 
     <div class="row">
         <div class="col-md-4">
-            <h2>Başlarken</h2>
+            <h2> &nbsp;<asp:Label ID="lblStarter" runat="server" Text=""></asp:Label></h2>
             <p>
                 &nbsp;<asp:Label ID="lblGettingStartedMessage" runat="server" Text="Label"></asp:Label>
             </p>

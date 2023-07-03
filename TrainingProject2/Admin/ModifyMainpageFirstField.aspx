@@ -34,6 +34,11 @@
             <asp:TextBox ID="txtWebHosting" TextMode="MultiLine" runat="server" Height="137px" Width="314px"></asp:TextBox>
             <br />
             <br />
+            <asp:Label ID="Label6" runat="server" Text="Anasayfa Başlarken"></asp:Label>
+            <br />
+            <asp:TextBox ID="txtStarter" TextMode="MultiLine" runat="server" Height="137px" Width="314px"></asp:TextBox>
+            <br />
+            <br />
         </div>
         <asp:Button ID="btnUpdate" runat="server" OnClick="btnUpdate_Click" Text="Güncelle" />
         <br />
