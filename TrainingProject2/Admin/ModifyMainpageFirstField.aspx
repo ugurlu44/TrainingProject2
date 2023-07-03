@@ -68,6 +68,12 @@
                 <br />
                 </div>
             
+            <asp:Label ID="Label6" runat="server" Text="Başlangıç"></asp:Label>
+                <br />
+                <asp:TextBox ID="txtStarter" TextMode="MultiLine" runat="server" Height="137px" Width="314px"></asp:TextBox>
+                <br />
+                <br />
+
         
         <asp:Button ID="btnUpdate" runat="server" OnClick="btnUpdate_Click" Text="Güncelle" />
         <br />

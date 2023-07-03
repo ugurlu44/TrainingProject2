@@ -41,14 +41,12 @@ namespace TrainingProject2.Business
         {
             string query = "INSERT INTO dbTraining.dbo.tbMainPageInfo " +
                 "values(" + (int)commentType + ",'" + textInfo + "',1,0,'" + DateTime.Now.ToString("yyyyMMdd HH:mm:ss") + "',null,null)";
-
             MyConnection.ExecuteCommand(query);
         }
 
         private static void updateTextInfo(string textInfo, MainPageEditableEnum commentType)
         {
             string query = "UPDATE dbTraining.dbo.tbMainPageInfo SET comment ='" + textInfo + "',updatedOn = '" + DateTime.Now.ToString("yyyyMMdd HH:mm:ss") + "' where commentType=" + (int)commentType;
-
             MyConnection.ExecuteCommand(query);
 
         }
