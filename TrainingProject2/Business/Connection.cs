@@ -1,4 +1,5 @@
-﻿using System.Data.SqlClient;
+﻿using System.Data;
+using System.Data.SqlClient;
 
 namespace TrainingProject2.Business
 {
@@ -29,6 +30,27 @@ namespace TrainingProject2.Business
             object returnVal = cmd.ExecuteScalar();
             con.Close();
             return returnVal;
+        }
+        public static void ExecuteCommand(SqlCommand cmd)
+        {
+            try
+            {
+                using (SqlConnection con = GetConnection())
+                {
+                    con.Open();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Connection = con;
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    con.Dispose();
+                }
+            }
+            catch (System.Exception)
+            {
+
+                //Buraya ;
+            }
+
         }
     }
 }
