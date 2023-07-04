@@ -7,6 +7,6 @@ namespace TrainingProject2.Common
 {
     public class CommonConst
     {
-        public const string RecordSaveSuccusfully = "Kayıt Güncellenmiştir.";
+        public const string RecordSaveSuccesfully = "Kayıt Güncellenmiştir.";
     }
 }

@@ -35,7 +35,7 @@ namespace TrainingProject2.Admin
             MainPageInfoBusiness.InsertOrUpdateInfoText(txtWebHosting.Text, MainPageEditableEnum.WebHosting);
             MainPageInfoBusiness.InsertOrUpdateInfoText(txtStarter.Text, MainPageEditableEnum.Starter);
 
-            Response.Write(CommonConst.RecordSaveSuccusfully);
+            Response.Write(CommonConst.RecordSaveSuccesfully);
         }
     }
 }
