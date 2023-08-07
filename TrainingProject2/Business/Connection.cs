@@ -19,7 +19,7 @@ namespace TrainingProject2.Business
             con.Open();
             cmd.ExecuteNonQuery();
             con.Close();
-            //addLog
+
         }
 
         public static object ExecuteScalar(string query)
